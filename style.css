@@ -1,0 +1,160 @@
+body{
+    background-color: white;
+}
+
+.banner{
+    background-clip: lightgray;
+}
+
+
+.container{
+    display: flex;
+}
+
+.encrypted-media{
+    width: 45%;
+    float: left;
+    margin-left: 10%;
+    padding: 10px;
+}
+
+.input{
+    padding: 10px;
+}
+
+textarea{
+    width: 90%;
+    padding: 1em;
+    border-radius: 1em;
+    border: 2px solid black;
+    text-align: justify;
+    font-size: 2em;
+    margin-bottom: 1em;
+    
+}
+
+p{
+    font-size: 1em;
+    color: rgba(158, 158, 158, 0.932);
+}
+
+.submits{
+    padding-top: 1em;
+    width: 100%
+}
+
+.ss{
+    width: 45%;;
+    padding-right: 10px;
+    font-size: 1.4em;
+    border-radius: 2em;
+    padding: 1em;
+    background-color: white;
+    border: 2px solid;
+    cursor: pointer;
+}
+
+.ss:hover{
+    border-color: black;
+    background-color: black;
+    color: white;
+    transition: 1s;
+}
+
+.result{
+    width: 25%;
+    display:flex;
+    text-align: center;
+    flex-direction:column;
+    align-items: center;
+    padding: 2em;
+    font-size: 1em;
+    color: black;
+    margin: 1em 0em 0em 1em;
+    border: 2px solid;
+    border-color: rgb(45, 60, 65);
+    background-color: rgba(211, 211, 211, 0.836);
+    border-radius: 2em;
+}
+
+.result p{
+    margin-bottom: 1em;
+}
+
+#copyButton{
+    width:80%;
+    display:none;
+    font-size: 1.4em;
+    border-radius: 2em;
+    padding: 1em;
+    background-color: white;
+    border: 2px solid;
+    cursor: pointer;
+    margin-top: auto;
+    cursor: pointer;
+}
+
+#copyButton:hover{
+    border-color: black;
+    background-color: black;
+    color: white;
+    transition: 1s;
+}
+
+@media (max-width: 811px){
+    
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .encrypted-media{
+        width: 100%;
+        float:none;
+        margin-left: 3em;
+        padding: auto;
+        margin-bottom: 2em;
+    }
+
+    textarea{
+        width: 70%;
+        padding: 10%;
+        border-radius: 1em;
+        border: 2px solid black;
+        text-align: justify;
+        font-size: 2em;
+        margin-bottom: 1em;
+        
+    }
+
+    .result{
+        width: 75%;
+        display:flex;
+        text-align: center;
+        flex-direction:column;
+        align-items: center;
+        padding: 6%;
+        margin-top: 3em;
+        font-size: 1em;
+        color: black;
+        margin: 0;
+        border: 2px solid black;
+        border-color: rgb(45, 60, 65);
+        background-color: rgba(211, 211, 211, 0.836);
+        border-radius: 1.5em;
+    }
+
+
+}
+
+@media (max-width: 430px){
+
+
+    .ss{
+        width: 80%;
+        margin-bottom: 1em;
+        margin-left: 5%;
+    }
+}
