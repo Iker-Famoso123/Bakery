@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Repostería Famoso</title>
+        <link rel="icon" href="LOGO.png" type="image/png">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="style.css">
@@ -15,7 +16,7 @@
                 <div class="container-fluid">
                     <a class="navbar-brand" href="index.php"><img class="banner" src="LOGO.png"></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-menu-up" viewBox="0 0 16 16">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="white" class="bi bi-menu-up" viewBox="0 0 16 16">
                     <path d="M7.646 15.854a.5.5 0 0 0 .708 0L10.207 14H14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3.793zM1 9V6h14v3zm14 1v2a1 1 0 0 1-1 1h-3.793a1 1 0 0 0-.707.293l-1.5 1.5-1.5-1.5A1 1 0 0 0 5.793 13H2a1 1 0 0 1-1-1v-2zm0-5H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1zM2 11.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 0-1h-8a.5.5 0 0 0-.5.5m0-4a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 0-1h-11a.5.5 0 0 0-.5.5m0-4a.5.5 0 0 0 .5.5h6a.5.5 0 0 0 0-1h-6a.5.5 0 0 0-.5.5"/>
                     </svg>
                     </button>
@@ -64,20 +65,23 @@
         <main>
             <div class="container">
                 <h1 class="mainTitle">NOSOTROS</h1>
+                 
                 <p>
                 Bienvenidos a Repostería Famoso, una tradición familiar que nos enorgullece mantener viva desde 1960. Nos especializamos en ofrecer repostería fina, una deliciosa muestra de la rica tradición repostera.<br><br>
                 En Repostería Famoso, nos esforzamos por ofrecer productos auténticos y de alta calidad. Nos distingue el compromiso de elaborar nuestras delicias con insumos cuidadosamente seleccionados, siempre apostando por lo mejor. Nuestra repostería es libre de conservadores, porque creemos que lo natural y artesanal es lo que realmente resalta los auténticos sabores y aromas que nos caracterizan.<br><br>
                 Cada uno de nuestros productos refleja la pasión y el esmero que ponemos en cada paso de su elaboración. La mayoría de nuestras delicias son elaboradas de forma artesanal, con dedicación y cariño, asegurándonos de mantener la autenticidad de las recetas que han sido transmitidas de generación en generación.<br><br>
                 En Repostería Famoso, no solo buscamos ofrecer exquisitos postres, sino también compartir con ustedes una experiencia que celebra la riqueza de la repostería. Agradecemos profundamente su preferencia y esperamos que disfruten de cada bocado, que está impregnado de historia, tradición y el sabor único que nos distingue. <br><br>
-            </p>
-            <p>¡Bienvenidos a nuestra familia repostera!</p>
+                </p>
+                <p>¡Bienvenidos a nuestra familia repostera!</p>
+                <hr>
+            
+                <div class="map-container">
+                    <h1>Donde encontrarnos</h1>
+                    <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1370.8774459117442!2d-103.60402473281059!3d19.883970502869825!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x84258124db5f0985%3A0x9a31d8e861e8bd08!2sReposteria%20Famoso!5e0!3m2!1ses!2smx!4v1702159213199!5m2!1ses!2smx" width=60% height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
 
             </div>
-
-            <div class="map">
-                <h1>Donde encontrarnos</h1>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1370.8774459117442!2d-103.60402473281059!3d19.883970502869825!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x84258124db5f0985%3A0x9a31d8e861e8bd08!2sReposteria%20Famoso!5e0!3m2!1ses!2smx!4v1702159213199!5m2!1ses!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
+            
 
             
         </main>

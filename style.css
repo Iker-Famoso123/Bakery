@@ -2,6 +2,11 @@ body{
     background-image: url('wallpaper.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+    scrollbar-width: thin;  
+}
+
+body::-webkit-scrollbar {
+    width: 0.5em; 
 }
 
 .banner{
@@ -18,10 +23,6 @@ body{
 .navbar-toggler:focus{
     box-shadow: none !important;
 }
-main{
-    display: flex;
-    align-items: center;
-}
 
 .container{
     width: 80%;
@@ -30,10 +31,7 @@ main{
     color: black;
     backdrop-filter: blur(10px);
     background-color: rgba(255, 255, 255, 0.334);
-}
-
-.mainTitle{
-    
+    border-radius: 10px;
 }
 
 .container p{
@@ -41,10 +39,17 @@ main{
     font-size: 1.5em;
 }
 
-.map{
-    width: 80%;
+.map-container{
+    width: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+}
+
+#map{
+    width: 80%;
+
 }
 
 
