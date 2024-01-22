@@ -6,6 +6,7 @@ body::-webkit-scrollbar {
     width: 0.5em; 
 }
 
+
 .banner{
     width: 150px;
     height: auto;
@@ -61,34 +62,38 @@ main{
     font-size: 1.5em;
 }
 
-.productos{
+.products{
     width: 100%;
     padding: 10px;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
     justify-content: center;
+    align-items: center;
 }
 
-.product{
-    width: 350px;
-    margin: 10px 5px 10px 5px;
-}
-
-.img-container{
+.product-container{
     position: relative;
-    width: 300px;
     height: 350px;
+    width: 300px;
+}
+
+.item-container{
+    position: relative;
+    height: 100%;
+    width: 100%;
     border: 2px solid #000;
-    margin: 5px;
     box-sizing: border-box;
     border-radius: 30px;
     overflow: hidden;
 }
 
-.img-product{
+.item-background{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    filter: brightness(1) blur(0);
+    
 }
 
 .text-img{
@@ -98,6 +103,14 @@ main{
     font-family: 'Frank Ruhl Libre', serif;
     font-style: italic;
 }
+
+.item-container:hover .item-background{
+    transform: scale(1.15) translateZ(0);
+    background-size: 300px;
+    filter: brightness(0.5) blur(8px);
+    transition: 0.7s;
+}
+
 
 
 .map-container{

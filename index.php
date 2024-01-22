@@ -26,7 +26,7 @@
                     </button>
                     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                         <div class="offcanvas-header">
-                            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+                            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menú</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                         </div>
                         <div class="offcanvas-body">
@@ -70,35 +70,40 @@
                 <hr>
 
                 <h1 id="inventory" style="font-family: 'Inter Tight', sans-serif;">PRODUCTOS</h1>
-                <div class="productos">
-                    <div class="product">
-                        <div class="img-container">
-                            <img class="img-product" src="col.jpg">
+                <div class="products">
+                    <div class="product-container">
+                        <div class="item-container">
+                            <img class="item-background" src="col.jpg">
                             <div class="text-img" style="top: 15%; left: 10%;">Coles</div>
+                            <div class="description-item"></div>
                         </div>
                     </div>
-                    <div class="product">
-                        <div class="img-container">
-                            <img class="img-product" src="donitas.jpg">
+                    <div class="product-container">
+                        <div class="item-container">
+                            <img class="item-background" src="donitas.jpg">
                             <div class="text-img" style="top: 20%; right: 10%;">Donitas</div>
+                            <div class="description-item"></div>
                         </div>
                     </div>
-                    <div class="product">
-                        <div class="img-container">
-                            <img class="img-product" src="estrellitas.jpg">
+                    <div class="product-container">
+                        <div class="item-container">
+                            <img class="item-background" src="estrellitas.jpg">
                             <div class="text-img" style="top: 15%; right: 10%;">Estrellitas<br>de nuez</div>
+                            <div class="description-item"></div>
                         </div>
                     </div>
-                    <div class="product">
-                        <div class="img-container">
-                            <img class="img-product" src="nidos.jpg">
+                    <div class="product-container">
+                        <div class="item-container">
+                            <img class="item-background" src="nidos.jpg">
                             <div class="text-img" style="top: 15%; left: 10%;">Nidos</div>
+                            <div class="description-item"></div>
                         </div>
                     </div>
-                    <div class="product">
-                        <div class="img-container">
-                            <img class="img-product" src="rollitos.jpg">
+                    <div class="product-container">
+                        <div class="item-container">
+                            <img class="item-background" src="rollitos.jpg">
                             <div class="text-img" style="top: 15%; right: 10%;">Rollitos de<br>membrillo</div>
+                            <div class="description-item"></div>
                         </div>
                     </div>
                 </div>
