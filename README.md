@@ -1,2 +1,2 @@
 # Bakery
-## Esta página es creada como practica hacia la Panadería Familiar
+## This page is created as a practice for the Family Bakery.
