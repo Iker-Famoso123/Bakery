@@ -20,5 +20,8 @@
   "homepage": "https://github.com/Iker-Famoso123/Bakery#readme",
   "devDependencies": {
     "tailwindcss": "^3.4.3"
+  },
+  "dependencies": {
+    "express": "4.19.2"
   }
 }
