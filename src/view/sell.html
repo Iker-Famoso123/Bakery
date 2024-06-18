@@ -17,7 +17,7 @@
     <body>
 
         <header>
-            <nav class="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
+            <!-- <nav class="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
                 <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                     <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
                         <img src="/assets/LOGO.png" class="h-8" alt="Logo">
@@ -46,76 +46,65 @@
                         </ul>
                     </div>
                 </div>
-            </nav>
+            </nav> -->
 
         </header>
 
         <main class="grid place-items-center w-full mt-12">
 
-            <div class="flex items-center justify-center pt-6 h-96 w-full" style="background-image: url('/assets/wallpaper-dark.jpg'); background-size: cover; background-position: center;">
+            <h1 class="font-bold text-4xl">Ventas</h1>
 
-                <h1 class="italic text-4xl text-white" style="font-family: 'Frank Ruhl Libre', serif; margin-right: 10%;">Tradición familiar que<br>nos distingue... </h1>
+            <div class="w-4/5 flex flex-wrap gap-3 justify-center">
 
-            </div>
-
-            <div class="pt-11 w-4/5 grid place-items-center" id="nosotros">
-                <h1 class="text-4xl" style="font-family: 'Inter Tight', sans-serif;">NOSOTROS</h1>
-                
-                <p class="text-justify text-2xl" style="font-family: 'Figtree', sans-serif;">
-                Descubre Repostería Famoso, una tradición familiar que perdura desde 1960. Especializados en repostería fina, nos dedicamos a ofrecer auténticos productos de alta calidad. Enorgulleciéndonos de utilizar insumos selectos y evitar conservadores, apostamos por lo natural y artesanal para resaltar los sabores genuinos que nos definen.<br><br>
-
-                Cada delicia refleja nuestra pasión y esmero, elaboradas artesanalmente con dedicación y cariño, siguiendo recetas transmitidas de generación en generación. En Repostería Famoso, no solo buscamos ofrecer exquisitos postres, sino también compartir una experiencia que celebra la riqueza de la repostería.<br><br>
-
-                Agradecemos tu preferencia y te invitamos a disfrutar de cada bocado impregnado de historia, tradición y el sabor único que nos distingue.<br>
-                </p>
-                <p class="pt-5 text-justify text-2xl" style="font-family: 'Figtree', sans-serif;">¡Bienvenidos a nuestra familia repostera!</p>
-                <hr>
-
-                <h1 id="inventory" class="pt-15 text-4xl mb-8" style="font-family: 'Inter Tight', sans-serif;">PRODUCTOS</h1>
-                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5">
-                    <div class="relative group h-96 w-80">
-                        <img id="imagen" class="object-cover w-full h-full transition duration-700 ease-in-out transform group-hover:drop-shadow-xl group-hover:scale-110 group-hover:translate-z-0 group-hover:brightness-50 group-hover:blur-md" src="/assets/col.jpg">
-                        <div class="w-full h-full pointer-events-none">
-                            <div class="absolute text-white text-2xl italic" style="top: 15%; left: 10%; font-family: 'Frank Ruhl Libre', serif;">Coles</div>
-                        </div>
-                        <div class="description-item"></div>
+                <article class="w-96 h-[400px] flex flex-col text-center justify-center rounded-xl border-black border-4">
+                    <h1 class="">Nidos</h1>
+                    <img src="/assets/nidos.jpg" class="w-full h-auto overflow-hidden">
+                    <div class="w-full flex tex-center justify-center">
+                        <button type="button" onclick="changeQuantity(this, -1)" class="inline-block rounded-md border-2 border-black bg-blue-500 px-2"> - </button>
+                        <span class="px-3">0</span>
+                        <button type="button" onclick="changeQuantity(this, +1)" class="inline-block rounded-md border-2 border-black bg-blue-500 px-2"> + </button>
                     </div>
-                    <div class="relative group h-96 w-80">
-                        <img id="imagen" class="object-cover w-full h-full transition duration-700 ease-in-out transform group-hover:drop-shadow-xl group-hover:scale-110 group-hover:translate-z-0 group-hover:brightness-50 group-hover:blur-md" src="/assets/donitas.jpg">
-                        <div class="w-full h-full pointer-events-none">
-                            <div class="absolute text-white text-2xl italic" style="top: 20%; left: 10%; font-family: 'Frank Ruhl Libre', serif;">Donitas</div>
-                        </div>
-                        <div class="description-item"></div>
-                    </div>
-                    <div class="relative group h-96 w-80">
-                        <img id="imagen" class="object-cover w-full h-full transition duration-700 ease-in-out transform group-hover:drop-shadow-xl group-hover:scale-110 group-hover:translate-z-0 group-hover:brightness-50 group-hover:blur-md" src="/assets/estrellitas.jpg">
-                        <div class="w-full h-full pointer-events-none">
-                            <div class="absolute text-white text-2xl italic" style="top: 15%; left: 10%; font-family: 'Frank Ruhl Libre', serif;">Estrellitas<br>de nuez</div>
-                        </div>
-                        <div class="description-item"></div>
-                    </div>
-                    <div class="relative group h-96 w-80">
-                        <img id="imagen" class="object-cover w-full h-full transition duration-700 ease-in-out transform group-hover:drop-shadow-xl group-hover:scale-110 group-hover:translate-z-0 group-hover:brightness-50 group-hover:blur-md" src="/assets/nidos.jpg">
-                        <div class="w-full h-full pointer-events-none">
-                            <div class="absolute text-white text-2xl italic" style="top: 15%; left: 10%; font-family: 'Frank Ruhl Libre', serif;">Nidos</div>
-                        </div>
-                        <div class="description-item"></div>
-                    </div>
-                    <div class="relative group h-96 w-80">
-                        <img id="imagen" class="object-cover w-full h-full transition duration-700 ease-in-out overflow-hidden transform group-hover:drop-shadow-xl group-hover:scale-110 group-hover:translate-z-0 group-hover:brightness-50 group-hover:blur-md" src="/assets/rollitos.jpg">
-                        <div class="w-full h-full pointer-events-none">
-                            <div class="absolute text-white text-2xl italic" style="top: 20%; left: 10%; font-family: 'Frank Ruhl Libre', serif;">Rollitos de<br>membrillo</div>
-                        </div>
-                        <div class="description-item"></div>
-                    </div>
-                </div>
+                </article>
 
-                <hr>
-            
-                <div class="w-full grid place-items-center" id="location">
-                    <h1 class="pt-14 text-4xl mb-8" style="font-family: 'Inter Tight', sans-serif;" style="font-family: 'Inter Tight', sans-serif;">VISITANOS</h1>
-                    <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1370.8774459117442!2d-103.60402473281059!3d19.883970502869825!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x84258124db5f0985%3A0x9a31d8e861e8bd08!2sReposteria%20Famoso!5e0!3m2!1ses!2smx!4v1702159213199!5m2!1ses!2smx" width=60% height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
+                <article class="w-96 h-[400px] flex flex-col text-center justify-center rounded-xl border-black border-4">
+                    <h1 class="">Donitas</h1>
+                    <img src="/assets/donitas.jpg" class="w-full h-auto overflow-hidden">
+                    <div class="w-full flex tex-center justify-center">
+                        <button type="button" onclick="changeQuantity(this, -1)" class="inline-block rounded-md border-2 border-black bg-blue-500 px-2"> - </button>
+                        <span class="px-3">0</span>
+                        <button type="button" onclick="changeQuantity(this, +1)" class="inline-block rounded-md border-2 border-black bg-blue-500 px-2"> + </button>
+                    </div>
+                </article>
+
+                <article class="w-96 h-[400px] flex flex-col text-center justify-center rounded-xl border-black border-4">
+                    <h1 class="">Coles</h1>
+                    <img src="/assets/col.jpg" class="w-full h-auto overflow-hidden">
+                    <div class="w-full flex tex-center justify-center">
+                        <button type="button" onclick="changeQuantity(this, -1)" class="inline-block rounded-md border-2 border-black bg-blue-500 px-2"> - </button>
+                        <span class="px-3 quantity">0</span>
+                        <button type="button" onclick="changeQuantity(this, +1)" class="inline-block rounded-md border-2 border-black bg-blue-500 px-2"> + </button>
+                    </div>
+                </article>
+
+                <article class="w-96 h-[400px] flex flex-col text-center justify-center rounded-xl border-black border-4">
+                    <h1 class="">Nidos</h1>
+                    <img src="/assets/nidos.jpg" class="w-full h-auto overflow-hidden">
+                    <div class="w-full flex tex-center justify-center">
+                        <button type="button" onclick="changeQuantity(this, -1)" class="inline-block rounded-md border-2 border-black bg-blue-500 px-2"> - </button>
+                        <span class="px-3">0</span>
+                        <button type="button" onclick="changeQuantity(this, +1)" class="inline-block rounded-md border-2 border-black bg-blue-500 px-2"> + </button>
+                    </div>
+                </article>
+
+                <article class="w-96 h-[400px] flex flex-col text-center justify-center rounded-xl border-black border-4">
+                    <h1 class="">Nidos</h1>
+                    <img src="/assets/nidos.jpg" class="w-full h-auto overflow-hidden">
+                    <div class="w-full flex tex-center justify-center">
+                        <button type="button" onclick="changeQuantity(this, -1)" class="inline-block rounded-md border-2 border-black bg-blue-500 px-2"> - </button>
+                        <span class="px-3">0</span>
+                        <button type="button" onclick="changeQuantity(this, +1)" class="inline-block rounded-md border-2 border-black bg-blue-500 px-2"> + </button>
+                    </div>
+                </article>
 
             </div>
             
@@ -127,6 +116,7 @@
 
         </footer>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+        <script src="./resources/js/index.js"></script>
+
     </body>
 </html>
