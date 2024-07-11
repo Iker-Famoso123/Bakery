@@ -6,7 +6,7 @@
         <title>Repostería Famoso</title>
         <link rel="icon" href="/assets/LOGO.png" type="image/png">
         <link rel="stylesheet" href="./resources/styles/output.css">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+        <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" /> -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@600&display=swap" rel="stylesheet">
@@ -61,7 +61,7 @@
                     <img src="/assets/nidos.jpg" class="w-full h-auto overflow-hidden">
                     <div class="w-full flex tex-center justify-center">
                         <button type="button" onclick="changeQuantity(this, -1)" class="inline-block rounded-md border-2 border-black bg-blue-500 px-2"> - </button>
-                        <span class="px-3">0</span>
+                        <span class="px-3 quantity" data-id="nidos">0</span>
                         <button type="button" onclick="changeQuantity(this, +1)" class="inline-block rounded-md border-2 border-black bg-blue-500 px-2"> + </button>
                     </div>
                 </article>
@@ -71,7 +71,7 @@
                     <img src="/assets/donitas.jpg" class="w-full h-auto overflow-hidden">
                     <div class="w-full flex tex-center justify-center">
                         <button type="button" onclick="changeQuantity(this, -1)" class="inline-block rounded-md border-2 border-black bg-blue-500 px-2"> - </button>
-                        <span class="px-3">0</span>
+                        <span class="px-3 quantity" data-id="donitas">0</span>
                         <button type="button" onclick="changeQuantity(this, +1)" class="inline-block rounded-md border-2 border-black bg-blue-500 px-2"> + </button>
                     </div>
                 </article>
@@ -81,31 +81,35 @@
                     <img src="/assets/col.jpg" class="w-full h-auto overflow-hidden">
                     <div class="w-full flex tex-center justify-center">
                         <button type="button" onclick="changeQuantity(this, -1)" class="inline-block rounded-md border-2 border-black bg-blue-500 px-2"> - </button>
-                        <span class="px-3 quantity">0</span>
+                        <span class="px-3 quantity" data-id="coles">0</span>
                         <button type="button" onclick="changeQuantity(this, +1)" class="inline-block rounded-md border-2 border-black bg-blue-500 px-2"> + </button>
                     </div>
                 </article>
 
                 <article class="w-96 h-[400px] flex flex-col text-center justify-center rounded-xl border-black border-4">
-                    <h1 class="">Nidos</h1>
-                    <img src="/assets/nidos.jpg" class="w-full h-auto overflow-hidden">
+                    <h1 class="">Estrellitas</h1>
+                    <img src="/assets/estrellitas.jpg" class="w-full h-auto overflow-hidden">
                     <div class="w-full flex tex-center justify-center">
                         <button type="button" onclick="changeQuantity(this, -1)" class="inline-block rounded-md border-2 border-black bg-blue-500 px-2"> - </button>
-                        <span class="px-3">0</span>
+                        <span class="px-3 quantity" data-id="estrellitas">0</span>
                         <button type="button" onclick="changeQuantity(this, +1)" class="inline-block rounded-md border-2 border-black bg-blue-500 px-2"> + </button>
                     </div>
                 </article>
 
                 <article class="w-96 h-[400px] flex flex-col text-center justify-center rounded-xl border-black border-4">
-                    <h1 class="">Nidos</h1>
-                    <img src="/assets/nidos.jpg" class="w-full h-auto overflow-hidden">
+                    <h1 class="">Rollitos</h1>
+                    <img src="/assets/rollitos.jpg" class="w-full h-auto overflow-hidden">
                     <div class="w-full flex tex-center justify-center">
                         <button type="button" onclick="changeQuantity(this, -1)" class="inline-block rounded-md border-2 border-black bg-blue-500 px-2"> - </button>
-                        <span class="px-3">0</span>
+                        <span class="px-3 quantity" data-id="rollitos">0</span>
                         <button type="button" onclick="changeQuantity(this, +1)" class="inline-block rounded-md border-2 border-black bg-blue-500 px-2"> + </button>
                     </div>
                 </article>
 
+            </div>
+
+            <div class="w-4/5 flex justify-center text-center mt-5">
+                <button type="button" class="px-2 rounded-2xl border-2 border-black hover:bg-blue-400 duration-700 transition-all ease-in-out" onclick="proceedToSale()">Hacer compra</button>
             </div>
             
 
@@ -116,7 +120,7 @@
 
         </footer>
 
-        <script src="./resources/js/index.js"></script>
+        <script src="./resources/js/sell.js"></script>
 
     </body>
 </html>
