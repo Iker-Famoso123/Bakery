@@ -1,7 +1,8 @@
 const urlTest = 'http://localhost:1234'
+const url = 'https://api-bakery.onrender.com'
 
 const log = () => {
-    window.location.href = "./sell.html"
+    window.location.href = "./src/view/sell.html"
 }
 
 const changeQuantity = (button, delta) => {
@@ -26,7 +27,7 @@ const collectQuantities = () => {
 const proceedToSale = async () => {
     const data = collectQuantities()
 
-    fetch(urlTest + '/sales', {
+    fetch(url + '/sales', {
         method: 'POST',
         body: JSON.stringify(data),
         headers: {
