@@ -1,3 +1,8 @@
+import { Notyf } from 'notyf';
+import 'notyf/notyf.min.css';
+
+const notyf = new Notyf();
+
 const urlTest = 'http://localhost:1234'
 const url = 'https://api.reposteriafamoso.com'
 
@@ -36,7 +41,13 @@ const proceedToSale = async () => {
         }
     })
     .then((res) => res.json())
-    .then((response) => console.log("Success: ", response))
+    .then((response) => {
+        console.log("Success: ", response)
+        document.querySelectorAll('button + input').forEach( input => {
+            input.value = 0
+        })
+        notyf.success('¡Venta registrada con éxito!');
+    })
     .catch((error) => console.error("Error: ", error))
 
 
