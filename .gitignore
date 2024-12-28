@@ -1,0 +1,126 @@
+# Archivos de sistema y entorno
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.log
+*.swp
+
+# Configuración de entorno
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+
+# Node.js / JavaScript / TypeScript
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+dist/
+build/
+coverage/
+*.tsbuildinfo
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+*.env
+pip-log.txt
+coverage/
+*.coverage
+*.egg-info/
+.tox/
+
+# Java
+*.class
+*.jar
+*.war
+*.ear
+*.iml
+*.iws
+.idea/
+out/
+target/
+build/
+
+# Ruby / Rails
+*.gem
+*.rbc
+.bundle/
+vendor/bundle/
+log/
+tmp/
+db/*.sqlite3
+db/*.sqlite3-journal
+coverage/
+.rspec
+*.log
+
+# PHP
+vendor/
+*.log
+
+# Go
+bin/
+*.test
+
+# C/C++
+*.o
+*.out
+*.a
+*.so
+*.dll
+*.dylib
+*.exe
+*.log
+
+# Logs y depuración
+*.log
+*.stackdump
+
+# Archivos de paquetes y compilados
+*.zip
+*.tar.gz
+*.7z
+*.rar
+*.tar.bz2
+*.gz
+*.jar
+*.war
+*.ear
+*.swp
+
+# Archivos de imagen y cache
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+*.ico
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.backup
+
+# Kubernetes
+*.yaml
+*.yml
+
+# Docker
+*.env
+.dockerignore
+docker-compose.override.yml
+
+# Otros
+*.bak
+*.tmp
+*.old
+*.save
