@@ -50,6 +50,9 @@ const proceedToSale = async () => {
     })
     .catch((error) => console.error("Error: ", error))
 
-
-
 }
+
+// Asignar funciones al objeto global `window`
+window.log = log;
+window.changeQuantity = changeQuantity;
+window.proceedToSale = proceedToSale;
