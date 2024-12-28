@@ -1,5 +1,5 @@
 const urlTest = 'http://localhost:1234'
-const url = 'https://api-bakery.onrender.com'
+const url = 'https://api.reposteriafamoso.com'
 
 const log = () => {
     window.location.href = "./src/view/sell.html"
