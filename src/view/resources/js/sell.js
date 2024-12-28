@@ -6,20 +6,20 @@ const log = () => {
 }
 
 const changeQuantity = (button, delta) => {
-    const quantityElement = button.parentElement.querySelector('input');
-    let currentQuantity = parseInt(quantityElement.value) || 0; // Asegúrate de manejar valores no numéricos
-    let newQuantity = currentQuantity + delta;
+    const quantityElement = button.parentElement.querySelector('input')
+    let currentQuantity = parseInt(quantityElement.value) || 0 // Asegúrate de manejar valores no numéricos
+    let newQuantity = currentQuantity + delta
 
     if (newQuantity >= 0) {
-        quantityElement.value = newQuantity;
+        quantityElement.value = newQuantity
     }
 };
 
 
 const collectQuantities = () => {
     const quantities = {}
-    document.querySelectorAll('.quantity').forEach( span => {
-        quantities[span.getAttribute('data-id')] = parseInt(span.textContent)
+    document.querySelectorAll('button + input').forEach( input => {
+        quantities[input.getAttribute('data-id')] = parseInt(input.value)
     })
 
     return quantities
