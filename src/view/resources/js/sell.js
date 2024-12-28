@@ -6,14 +6,15 @@ const log = () => {
 }
 
 const changeQuantity = (button, delta) => {
-    const quantityElement = button.parentElement.children[1];
-    let currentQuantity = parseInt(quantityElement.innerText);
+    const quantityElement = button.parentElement.querySelector('input');
+    let currentQuantity = parseInt(quantityElement.value) || 0; // Asegúrate de manejar valores no numéricos
     let newQuantity = currentQuantity + delta;
 
     if (newQuantity >= 0) {
-        quantityElement.innerText = newQuantity;
+        quantityElement.value = newQuantity;
     }
-}
+};
+
 
 const collectQuantities = () => {
     const quantities = {}
