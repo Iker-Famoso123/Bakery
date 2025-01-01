@@ -10,15 +10,41 @@ const log = () => {
     window.location.href = "./src/view/sell.html"
 }
 
-const changeQuantity = (button, delta) => {
-    const quantityElement = button.parentElement.querySelector('input')
-    let currentQuantity = parseInt(quantityElement.value) || 0 // Asegúrate de manejar valores no numéricos
-    let newQuantity = currentQuantity + delta
+// Función para incrementar la cantidad
+const incrementQuantity = (button) => {
+    const quantityElement = button.parentElement.querySelector('input');
+    let currentQuantity = parseInt(quantityElement.value) || 0; // Asegúrate de manejar valores no numéricos
+    let newQuantity = currentQuantity + 1;
+
+    quantityElement.value = newQuantity;
+};
+
+// Función para decrementar la cantidad
+const decrementQuantity = (button) => {
+    const quantityElement = button.parentElement.querySelector('input');
+    let currentQuantity = parseInt(quantityElement.value) || 0; // Asegúrate de manejar valores no numéricos
+    let newQuantity = currentQuantity - 1;
 
     if (newQuantity >= 0) {
-        quantityElement.value = newQuantity
+        quantityElement.value = newQuantity;
     }
 };
+
+// Asignar eventos a los botones al cargar la página
+document.addEventListener('DOMContentLoaded', () => {
+    // Botones de incremento
+    document.querySelectorAll('.increment').forEach(button => {
+        button.addEventListener('click', () => incrementQuantity(button));
+    });
+
+    // Botones de decremento
+    document.querySelectorAll('.decrement').forEach(button => {
+        button.addEventListener('click', () => decrementQuantity(button));
+    });
+
+    document.getElementById('logButton').addEventListener('click', () => log());
+});
+
 
 
 const collectQuantities = () => {
@@ -56,3 +82,4 @@ const proceedToSale = async () => {
 window.log = log;
 window.changeQuantity = changeQuantity;
 window.proceedToSale = proceedToSale;
+
