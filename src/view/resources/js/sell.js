@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
         types: [
             {
                 type: 'success',
-                background: '#7367F0',
+                background: '#2ECC71',
                 icon: {
                     tagName: 'i', // Usar Font Awesome
                     className: 'fas fa-check-circle !text-white !text-lg' // Ícono de Font Awesome con clases de estilo
