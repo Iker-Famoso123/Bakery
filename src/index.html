@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Repostería Famoso</title>
+        <link rel="icon" href="../assets/LOGO.png" type="image/png">
+        <link rel="stylesheet" href="view/resources/styles/output.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Figtree&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Heebo&display=swap" rel="stylesheet">
+    </head>
+    <body class="bg-gray-50">
+
+        <header>
+            <nav class="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
+                <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+                    <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+                        <img src="../assets/LOGO.png" class="h-8" alt="Logo">
+                        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Repostería Famoso</span>
+                    </a>
+                    <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+                        <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 transition-transform transform hover:scale-105" onclick="log()">Iniciar sesión</button>
+                        <button type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false" onclick="toggleMenu()">
+                            <span class="sr-only">Open main menu</span>
+                            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+                        <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                            <li>
+                                <a href="#nosotros" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-300 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-black md:dark:hover:bg-transparent dark:border-gray-700">Nosotros</a>
+                            </li>
+                            <li>
+                                <a href="#inventory" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-300 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-black md:dark:hover:bg-transparent dark:border-gray-700">Productos</a>
+                            </li>
+                            <li>
+                                <a href="#location" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-300 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-black md:dark:hover:bg-transparent dark:border-gray-700">Encuentranos</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main class="grid place-items-center w-full mt-16 mb-3">
+            <div class="flex items-center justify-center pt-6 h-96 w-full bg-cover bg-center" style="background-image: url('../assets/wallpaper-dark.jpg');">
+                <h1 class="italic text-4xl text-white" style="font-family: 'Frank Ruhl Libre', serif;">Tradición familiar que<br>nos distingue...</h1>
+            </div>
+
+            <div class="pt-11 w-4/5 grid place-items-center" id="nosotros">
+                <h1 class="text-4xl mb-6" style="font-family: 'Inter Tight', sans-serif;">NOSOTROS</h1>
+                <p class="text-justify text-2xl" style="font-family: 'Figtree', sans-serif;">
+                    Descubre Repostería Famoso, una tradición familiar que perdura desde 1960. Especializados en repostería fina, nos dedicamos a ofrecer auténticos productos de alta calidad. Enorgulleciéndonos de utilizar insumos selectos y evitar conservadores, apostamos por lo natural y artesanal para resaltar los sabores genuinos que nos definen.<br><br>
+                
+                    Cada delicia refleja nuestra pasión y esmero, elaboradas artesanalmente con dedicación y cariño, siguiendo recetas transmitidas de generación en generación. En Repostería Famoso, no solo buscamos ofrecer exquisitos postres, sino también compartir una experiencia que celebra la riqueza de la repostería.<br><br>
+                
+                    Agradecemos tu preferencia y te invitamos a disfrutar de cada bocado impregnado de historia, tradición y el sabor único que nos distingue.<br>
+                    </p>
+                    <p class="pt-5 text-justify text-2xl" style="font-family: 'Figtree', sans-serif;">¡Bienvenidos a nuestra familia repostera!</p>
+
+                <hr class="w-3/4 mt-8">
+
+                <h1 id="inventory" class="pt-14 text-4xl mb-8" style="font-family: 'Inter Tight', sans-serif;">PRODUCTOS</h1>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+                    <div class="relative group h-80 w-full bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img class="w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-50" src="../assets/col.jpg" alt="Coles">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <span class="text-white text-lg font-semibold">Coles</span>
+                        </div>
+                    </div>
+                    <div class="relative group h-80 w-full bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img class="w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-50" src="../assets/donitas.jpg" alt="Donitas">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <span class="text-white text-lg font-semibold">Donitas</span>
+                        </div>
+                    </div>
+                    <div class="relative group h-80 w-full bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img class="w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-50" src="../assets/estrellitas.jpg" alt="Estrellitas de Nuez">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <span class="text-white text-lg font-semibold">Estrellitas de Nuez</span>
+                        </div>
+                    </div>
+                    <div class="relative group h-80 w-full bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img class="w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-50" src="../assets/nidos.jpg" alt="Nidos">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <span class="text-white text-lg font-semibold">Nidos</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="bg-gray-900 text-white py-6 text-center">
+            <p class="text-sm">&copy; 2025 Repostería Famoso. Todos los derechos reservados.</p>
+        </footer>
+
+        <script>
+            function toggleMenu() {
+                const menu = document.getElementById('navbar-sticky');
+                menu.classList.toggle('hidden');
+            }
+        </script>
+        <script src="view/resources/js/sell.js"></script>
+    </body>
+</html>
+
+
