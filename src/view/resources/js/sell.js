@@ -5,47 +5,57 @@ const log = () => {
     window.location.href = "./src/view/sell.html"
 }
 
-const changeQuantity = (button, delta) => {
-    const quantityElement = button.parentElement.querySelector('input')
-    let currentQuantity = parseInt(quantityElement.value) || 0 // Asegúrate de manejar valores no numéricos
-    let newQuantity = currentQuantity + delta
 
-    if (newQuantity >= 0) {
-        quantityElement.value = newQuantity
-    }
-};
+document.addEventListener('DOMContentLoaded', () => {
+    const notyf = new Notyf();
+    notyf.success('¡Operación exitosa!');
 
-
-const collectQuantities = () => {
-    const quantities = {}
-    document.querySelectorAll('button + input').forEach( input => {
-        quantities[input.getAttribute('data-id')] = parseInt(input.value)
-    })
-
-    return quantities
-}
-
-const proceedToSale = async () => {
-    const data = collectQuantities()
-
-    fetch(url + '/sales', {
-        method: 'POST',
-        body: JSON.stringify(data),
-        headers: {
-            "Content-Type": "application/json"
+    const changeQuantity = (button, delta) => {
+        const quantityElement = button.parentElement.querySelector('input')
+        let currentQuantity = parseInt(quantityElement.value) || 0 // Asegúrate de manejar valores no numéricos
+        let newQuantity = currentQuantity + delta
+    
+        if (newQuantity >= 0) {
+            quantityElement.value = newQuantity
         }
-    })
-    .then((res) => res.json())
-    .then((response) => {
-        console.log("Success: ", response)
+    };
+    
+    
+    const collectQuantities = () => {
+        const quantities = {}
         document.querySelectorAll('button + input').forEach( input => {
-            input.value = 0
+            quantities[input.getAttribute('data-id')] = parseInt(input.value)
         })
-        notyf.success('¡Venta registrada con éxito!');
-    })
-    .catch((error) => console.error("Error: ", error))
+    
+        return quantities
+    }
+    
+    const proceedToSale = async () => {
+        const data = collectQuantities()
+    
+        fetch(url + '/sales', {
+            method: 'POST',
+            body: JSON.stringify(data),
+            headers: {
+                "Content-Type": "application/json"
+            }
+        })
+        .then((res) => res.json())
+        .then((response) => {
+            console.log("Success: ", response)
+            document.querySelectorAll('button + input').forEach( input => {
+                input.value = 0
+            })
+            notyf.success('¡Venta registrada con éxito!');
+        })
+        .catch((error) => {
+            notyf.error('¡Hubo un error al registrar la venta!');
+            console.error("Error: ", error);
+        })
+    
+    }    
+});
 
-}
 
 
 
