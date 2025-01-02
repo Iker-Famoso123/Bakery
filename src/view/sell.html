@@ -29,9 +29,9 @@
                     <div class="p-4 flex flex-col items-center">
                         <h2 class="text-lg font-semibold text-gray-800 mb-2">Nidos</h2>
                         <div class="flex items-center space-x-2">
-                            <button type="button" class="bg-red-500 text-white px-3 py-1 rounded-md hover:bg-red-600">-</button>
+                            <button type="button" onclick="changeQuantity(this, -1)" class="bg-red-500 text-white px-3 py-1 rounded-md hover:bg-red-600">-</button>
                             <input type="number" class="w-16 text-center border border-gray-300 rounded-md" value="0" min="0" data-id="nidos" onchange="updateQuantity(this)">
-                            <button type="button" class="bg-blue-500 text-white px-3 py-1 rounded-md hover:bg-blue-600">+</button>
+                            <button type="button" onclick="changeQuantity(this, +1)" class="bg-blue-500 text-white px-3 py-1 rounded-md hover:bg-blue-600">+</button>
                         </div>
                     </div>
                 </div>
@@ -41,9 +41,9 @@
                     <div class="p-4 flex flex-col items-center">
                         <h2 class="text-lg font-semibold text-gray-800 mb-2">Donitas</h2>
                         <div class="flex items-center space-x-2">
-                            <button type="button" class="bg-red-500 text-white px-3 py-1 rounded-md hover:bg-red-600">-</button>
+                            <button type="button" onclick="changeQuantity(this, -1)" class="bg-red-500 text-white px-3 py-1 rounded-md hover:bg-red-600">-</button>
                             <input type="number" class="w-16 text-center border border-gray-300 rounded-md" value="0" min="0" data-id="donitas" onchange="updateQuantity(this)">
-                            <button type="button" class="bg-blue-500 text-white px-3 py-1 rounded-md hover:bg-blue-600">+</button>
+                            <button type="button" onclick="changeQuantity(this, +1)" class="bg-blue-500 text-white px-3 py-1 rounded-md hover:bg-blue-600">+</button>
                         </div>
                     </div>
                 </div>
@@ -53,9 +53,9 @@
                     <div class="p-4 flex flex-col items-center">
                         <h2 class="text-lg font-semibold text-gray-800 mb-2">Coles</h2>
                         <div class="flex items-center space-x-2">
-                            <button type="button" class="bg-red-500 text-white px-3 py-1 rounded-md hover:bg-red-600">-</button>
+                            <button type="button" onclick="changeQuantity(this, -1)" class="bg-red-500 text-white px-3 py-1 rounded-md hover:bg-red-600">-</button>
                             <input type="number" class="w-16 text-center border border-gray-300 rounded-md" value="0" min="0" data-id="coles" onchange="updateQuantity(this)">
-                            <button type="button" class="bg-blue-500 text-white px-3 py-1 rounded-md hover:bg-blue-600">+</button>
+                            <button type="button" onclick="changeQuantity(this, +1)" class="bg-blue-500 text-white px-3 py-1 rounded-md hover:bg-blue-600">+</button>
                         </div>
                     </div>
                 </div>
@@ -65,9 +65,9 @@
                     <div class="p-4 flex flex-col items-center">
                         <h2 class="text-lg font-semibold text-gray-800 mb-2">Estrellitas</h2>
                         <div class="flex items-center space-x-2">
-                            <button type="button" class="bg-red-500 text-white px-3 py-1 rounded-md hover:bg-red-600">-</button>
+                            <button type="button" onclick="changeQuantity(this, -1)" class="bg-red-500 text-white px-3 py-1 rounded-md hover:bg-red-600">-</button>
                             <input type="number" class="w-16 text-center border border-gray-300 rounded-md" value="0" min="0" data-id="estrellitas" onchange="updateQuantity(this)">
-                            <button type="button" class="bg-blue-500 text-white px-3 py-1 rounded-md hover:bg-blue-600">+</button>
+                            <button type="button" onclick="changeQuantity(this, +1)" class="bg-blue-500 text-white px-3 py-1 rounded-md hover:bg-blue-600">+</button>
                         </div>
                     </div>
                 </div>
@@ -77,9 +77,9 @@
                     <div class="p-4 flex flex-col items-center">
                         <h2 class="text-lg font-semibold text-gray-800 mb-2">Rollitos</h2>
                         <div class="flex items-center space-x-2">
-                            <button type="button" class="decrement bg-red-500 text-white px-3 py-1 rounded-md hover:bg-red-600">-</button>
+                            <button type="button" onclick="changeQuantity(this, -1)" class="decrement bg-red-500 text-white px-3 py-1 rounded-md hover:bg-red-600">-</button>
                             <input type="number" class="w-16 text-center border border-gray-300 rounded-md" value="0" min="0" data-id="rollitos" onchange="updateQuantity(this)">
-                            <button type="button" class="increment bg-blue-500 text-white px-3 py-1 rounded-md hover:bg-blue-600">+</button>
+                            <button type="button" onclick="changeQuantity(this, +1)" class="increment bg-blue-500 text-white px-3 py-1 rounded-md hover:bg-blue-600">+</button>
                         </div>
                     </div>
                 </div>

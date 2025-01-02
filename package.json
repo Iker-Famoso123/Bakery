@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "npx tailwindcss -i ./src/view/resources/styles/input.css -o ./src/view/resources/styles/output.css --watch & nodemon ./src/view/resources/js/api_rest/app.js"
