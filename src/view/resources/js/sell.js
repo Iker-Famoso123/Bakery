@@ -1,6 +1,11 @@
 const urlTest = 'http://localhost:1234'
 const url = 'https://api.reposteriafamoso.com'
 
+const openModal = document.getElementById('openModal');
+const closeModal = document.getElementById('closeModal');
+const modal = document.getElementById('modal');
+const modalContent = document.getElementById('modalText');
+
 const log = () => {
     window.location.href = "view/sell.html"
 }
@@ -64,6 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.proceedToSale = async () => {
         const data = collectQuantities()
+        console.log(data);
     
         fetch(url + '/sales', {
             method: 'POST',
@@ -85,6 +91,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 ripple: true,
                 dismissible: true
             });
+            modalContent.innerHTML = `Venta registrada con éxito. <br> Total: $${response.totalValue}`;
+            modal.classList.remove('opacity-0', 'pointer-events-none');
+            modal.classList.add('opacity-100', 'pointer-events-auto');
+
         })
         .catch((error) => {
             notyf.open({
@@ -121,6 +131,27 @@ const collectQuantities = () => {
 
     return quantities
 }
+
+
+// Función para abrir el modal
+openModal.addEventListener('click', () => {
+    modal.classList.remove('opacity-0', 'pointer-events-none');
+    modal.classList.add('opacity-100', 'pointer-events-auto');
+});
+
+// Función para cerrar el modal
+closeModal.addEventListener('click', () => {
+    modal.classList.remove('opacity-100', 'pointer-events-auto');
+    modal.classList.add('opacity-0', 'pointer-events-none');
+});
+
+// Cerrar el modal al hacer clic fuera de él
+modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+        modal.classList.remove('opacity-100', 'pointer-events-auto');
+        modal.classList.add('opacity-0', 'pointer-events-none');
+    }
+});
 
 
 
