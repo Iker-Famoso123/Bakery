@@ -70,6 +70,18 @@ document.addEventListener('DOMContentLoaded', () => {
     window.proceedToSale = async () => {
         const data = collectQuantities()
         console.log(data);
+        const isEmpty = Object.values(data).every(value => value === 0);
+
+        if (isEmpty) {
+            notyf.open({
+                type: 'warning',
+                message: 'No hay productos seleccionados',
+                duration: 3000,
+                ripple: true,
+                dismissible: true
+            });
+            return
+        }
     
         fetch(url + '/sales', {
             method: 'POST',
@@ -91,7 +103,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 ripple: true,
                 dismissible: true
             });
-            modalContent.innerHTML = `Venta registrada con éxito. <br> Total: $${response.totalValue}`;
+            generateSummary(data);
+            modalContent.innerHTML += `<br> Total: $${response.totalValue}`;
             modal.classList.remove('opacity-0', 'pointer-events-none');
             modal.classList.add('opacity-100', 'pointer-events-auto');
 
@@ -132,7 +145,6 @@ const collectQuantities = () => {
     return quantities
 }
 
-
 // Función para abrir el modal
 openModal.addEventListener('click', () => {
     modal.classList.remove('opacity-0', 'pointer-events-none');
@@ -152,6 +164,27 @@ modal.addEventListener('click', (e) => {
         modal.classList.add('opacity-0', 'pointer-events-none');
     }
 });
+
+const generateSummary = (data) => {
+    // Filtrar productos con cantidad mayor a 0
+    const items = Object.entries(data).filter(([key, value]) => value > 0);
+
+    // Si no hay productos, mostrar un mensaje de que no hay ventas
+    if (items.length === 0) {
+        modalContent.innerHTML = "No se ha realizado ninguna venta.";
+        return;
+    }
+
+    // Construir una lista HTML con los productos y cantidades
+    const summaryHTML = `
+        <ul class="text-left">
+            ${items.map(([product, quantity]) => `<li>${product}: ${quantity}</li>`).join('')}
+        </ul>
+    `;
+
+    // Insertar el resumen en el modal
+    modalContent.innerHTML = summaryHTML;
+};
 
 
 
