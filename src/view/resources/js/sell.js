@@ -177,8 +177,11 @@ const generateSummary = (data) => {
 
     // Construir una lista HTML con los productos y cantidades
     const summaryHTML = `
-        <ul class="text-left">
-            ${items.map(([product, quantity]) => `<li>${product}: ${quantity}</li>`).join('')}
+        <ul class="text-left list-disc list-inside space-y-2">
+            ${items.map(([product, quantity]) => {
+                const capitalizedProduct = product.charAt(0).toUpperCase() + product.slice(1).toLowerCase();
+                return `<li>${capitalizedProduct}: ${quantity}</li>`;
+            }).join('')}
         </ul>
     `;
 
