@@ -7,7 +7,11 @@ const modal = document.getElementById('modal');
 const modalContent = document.getElementById('modalText');
 
 const log = () => {
-    window.location.href = "view/sell.html"
+    window.location.href = "view/login.html"
+}
+
+const register = () => {
+    window.location.href = "view/register.html"
 }
 
 
