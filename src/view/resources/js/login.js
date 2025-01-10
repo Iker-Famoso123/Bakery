@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 notyf.open({
                     type: 'error',
-                    message: 'Error al registrar usuario',
+                    message: data.message,
                     duration: 3000,
                     ripple: true,
                     dismissible: true
