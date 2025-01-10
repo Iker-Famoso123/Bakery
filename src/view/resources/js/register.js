@@ -5,22 +5,31 @@ const form = document.getElementById('registerForm')
 form.addEventListener('submit', async (e) => {
     e.preventDefault()
 
-    const formData = new FormData(form)
-    for (let [key, value] of formData.entries()) {
-        console.log(`${key}: ${value}`);
-    }
+    const formData = new FormData(form); // Crear FormData a partir de un formulario
 
-    const response = await fetch(url+'/auth/register', {
+    // Convertir FormData a un objeto JSON
+    const data = {};
+    formData.forEach((value, key) => {
+        data[key] = value;
+    });
+
+    console.log(data);
+
+    fetch(url+'/auth/register', {
         method: 'POST',
-        body: formData,
+        body: JSON.stringify(data),
+        headers: {
+            'Content-Type': 'application/json',
+        }
     })
-
-    const data = await response.json()
-
-    if (data.success) {
-        notyf.success('Usuario registrado exitosamente')
-        form.reset()
-    } else {
-        notyf.error(data.message)
-    }
+        .then(response => response.json())
+        .then(data => {
+            console.log(data)
+            if (data.status === 'success') {
+                window.location.href = 'login.html'
+            } else {
+                alert(data.message)
+            }
+    })
+        
 })
