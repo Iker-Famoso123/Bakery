@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (data.success) {
                 notyf.open({
                     type: 'success',
-                    message: 'Usuario registrado',
+                    message: data.message,
                     duration: 3000,
                     ripple: true,
                     dismissible: true
