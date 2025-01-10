@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
         console.log(data);
     
-        fetch(url+'/auth/register', {
+        fetch(url+'/auth/login', {
             method: 'POST',
             body: JSON.stringify(data),
             headers: {
@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     ripple: true,
                     dismissible: true
                 });
-                window.location.href = 'login.html'
+                window.location.href = 'sell.html'
             } else {
                 notyf.open({
                     type: 'error',
