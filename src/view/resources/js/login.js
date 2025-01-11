@@ -73,7 +73,8 @@ document.addEventListener('DOMContentLoaded', () => {
             body: JSON.stringify(data),
             headers: {
                 'Content-Type': 'application/json',
-            }
+            },
+            credentials: 'include'
         })
         .then(response => response.json())
         .then(data => {
@@ -86,7 +87,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     ripple: true,
                     dismissible: true
                 });
-                window.location.href = 'sell.html'
+
+                setTimeout(() => {
+                    window.location.href = 'sell.html'
+                } , 10000)
+                
             } else {
                 notyf.open({
                     type: 'error',
