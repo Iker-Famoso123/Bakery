@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
         console.log(data);
     
-        fetch(urlTest+'/auth/login', {
+        fetch(url+'/auth/login', {
             method: 'POST',
             body: JSON.stringify(data),
             headers: {
