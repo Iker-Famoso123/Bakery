@@ -1,5 +1,5 @@
 const url = 'https://api.reposteriafamoso.com'
-
+const urlTest = 'http://localhost:1234'
 const form = document.getElementById('registerForm')
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
         console.log(data);
     
-        fetch(url+'/auth/login', {
+        fetch(urlTest+'/auth/login', {
             method: 'POST',
             body: JSON.stringify(data),
             headers: {
@@ -82,15 +82,14 @@ document.addEventListener('DOMContentLoaded', () => {
             if (data.success) {
                 notyf.open({
                     type: 'success',
-                    message: data.message,
+                    message: 'Bienvenido',
                     duration: 3000,
                     ripple: true,
                     dismissible: true
                 });
-
                 setTimeout(() => {
-                    window.location.href = 'sell.html'
-                } , 10000)
+                    window.location.href = 'sell.html';
+                }, 2000);
                 
             } else {
                 notyf.open({
