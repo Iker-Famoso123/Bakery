@@ -1,4 +1,4 @@
-const urlTest = 'http://localhost:1234'
+const urlTest = 'http://localhost:5555'
 const url = 'https://api.reposteriafamoso.com'
 
 const openModal = document.getElementById('openModal');
@@ -92,10 +92,21 @@ document.addEventListener('DOMContentLoaded', () => {
             body: JSON.stringify(data),
             headers: {
                 "Content-Type": "application/json"
-            }
+            },
+            credentials: 'include'
         })
         .then((res) => res.json())
         .then((response) => {
+            if (response.error) {
+                notyf.open({
+                    type: 'error',
+                    message: 'No autorizado',
+                    duration: 3000,
+                    ripple: true,
+                    dismissible: true
+                });
+                window.location.href = "login.html"
+            }
             console.log("Success: ", response)
             document.querySelectorAll('button + input').forEach( input => {
                 input.value = 0

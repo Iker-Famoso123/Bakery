@@ -1,5 +1,5 @@
 const url = 'https://api.reposteriafamoso.com'
-const urlTest = 'http://localhost:1234'
+const urlTest = 'http://localhost:5555'
 const form = document.getElementById('registerForm')
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
         formData.forEach((value, key) => {
             data[key] = value;
         });
-    
+        
         console.log(data);
     
         fetch(url+'/auth/login', {
