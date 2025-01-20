@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
         console.log(data);
     
-        fetch(url+'/auth/register', {
+        fetch(url + '/auth/register', {
             method: 'POST',
             body: JSON.stringify(data),
             headers: {

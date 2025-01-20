@@ -204,6 +204,21 @@ const generateSummary = (data) => {
     modalContent.innerHTML = summaryHTML;
 };
 
+const logout = () => {
+    fetch(url + '/logout', {
+        method: 'POST',
+        credentials: 'include'
+    })
+    .then((res) => res.json())
+    .then((response) => {
+        console.log("Success: ", response)
+        window.location.href = "login.html"
+    })
+    .catch((error) => {
+        console.error("Error: ", error);
+    })  
+}
+
 
 
 
