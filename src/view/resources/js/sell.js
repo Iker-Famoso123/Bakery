@@ -204,7 +204,7 @@ const generateSummary = (data) => {
     modalContent.innerHTML = summaryHTML;
 };
 
-const logout = () => {
+const log_out = () => {
     fetch(url + '/logout', {
         method: 'POST',
         credentials: 'include'
