@@ -106,22 +106,23 @@ document.addEventListener('DOMContentLoaded', () => {
                     dismissible: true
                 });
                 window.location.href = "login.html"
+            } else {
+                console.log("Success: ", response)
+                document.querySelectorAll('button + input').forEach( input => {
+                    input.value = 0
+                });
+                notyf.open({
+                    type: 'success',
+                    message: 'Venta registrada con éxito',
+                    duration: 3000,
+                    ripple: true,
+                    dismissible: true
+                });
+                generateSummary(data);
+                modalContent.innerHTML += `<br> Total: $${response.totalValue}`;
+                modal.classList.remove('opacity-0', 'pointer-events-none');
+                modal.classList.add('opacity-100', 'pointer-events-auto');
             }
-            console.log("Success: ", response)
-            document.querySelectorAll('button + input').forEach( input => {
-                input.value = 0
-            });
-            notyf.open({
-                type: 'success',
-                message: 'Venta registrada con éxito',
-                duration: 3000,
-                ripple: true,
-                dismissible: true
-            });
-            generateSummary(data);
-            modalContent.innerHTML += `<br> Total: $${response.totalValue}`;
-            modal.classList.remove('opacity-0', 'pointer-events-none');
-            modal.classList.add('opacity-100', 'pointer-events-auto');
 
         })
         .catch((error) => {
