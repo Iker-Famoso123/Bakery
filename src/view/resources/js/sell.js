@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     dismissible: true
                 });
                 generateSummary(data);
-                modalContent.innerHTML += `<br> Total: $${response.totalValue}`;
+                modalContent.innerHTML += `<br> Total: $${response.newSale.totalValue}`;
                 modal.classList.remove('opacity-0', 'pointer-events-none');
                 modal.classList.add('opacity-100', 'pointer-events-auto');
             }
