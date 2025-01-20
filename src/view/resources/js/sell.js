@@ -6,6 +6,26 @@ const closeModal = document.getElementById('closeModal');
 const modal = document.getElementById('modal');
 const modalContent = document.getElementById('modalText');
 
+const ws = new WebSocket('wss://api.reposteriafamoso.com/ws');
+
+ws.onopen = () => {
+    console.log('Connected to WebSocket');
+    ws.send('Hello from client!');
+};
+
+ws.onmessage = (event) => {
+    console.log(`Message from server: ${event.data}`);
+};
+
+ws.onclose = () => {
+    console.log('Disconnected from WebSocket');
+};
+
+ws.onerror = (error) => {
+    console.error('WebSocket error:', error.message);
+};
+
+
 const log = () => {
     window.location.href = "view/login.html"
 }
