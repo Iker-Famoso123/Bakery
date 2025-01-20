@@ -205,7 +205,7 @@ const generateSummary = (data) => {
 };
 
 const log_out = () => {
-    fetch(url + '/logout', {
+    fetch(url + '/auth/logout', {
         method: 'POST',
         credentials: 'include'
     })
