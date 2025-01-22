@@ -6,7 +6,7 @@ const closeModal = document.getElementById('closeModal');
 const modal = document.getElementById('modal');
 const modalContent = document.getElementById('modalText');
 
-const ws = new WebSocket('wss://api.reposteriafamoso.com/ws');
+const ws = new WebSocket('wss://ws.reposteriafamoso.com');
 
 ws.onopen = () => {
     console.log('Connected to WebSocket');
@@ -14,7 +14,34 @@ ws.onopen = () => {
 };
 
 ws.onmessage = (event) => {
-    console.log(`Message from server: ${event.data}`);
+
+    console.log('Mensaje recibido del servidor:', event.data);
+
+    try {
+        // Intentar parsear el mensaje como JSON
+        const data = JSON.parse(event.data);
+        
+        // Ahora puedes manejar los datos como un objeto JavaScript
+        console.log('Datos procesados:', data);
+
+        // Crear el HTML usando map y join
+        const summaryHTML = `
+        <ul class="text-left list-disc list-inside space-y-2">
+            ${data.map(item => {
+                // Capitalizar el nombre del producto
+                const capitalizedProduct = item.name.charAt(0).toUpperCase() + item.name.slice(1).toLowerCase();
+                // Crear el li con el producto y su cantidad
+                return `<li>${capitalizedProduct}: ${item.quantity}</li>`;
+            }).join('')}
+        </ul>
+        `;
+
+        // Insertar el resumen en el modal
+        modalContent.innerHTML = summaryHTML;
+    } catch (error) {
+        console.error('Error al procesar los datos JSON:', error);
+    }
+
 };
 
 ws.onclose = () => {
