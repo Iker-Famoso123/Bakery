@@ -165,6 +165,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     ripple: true,
                     dismissible: true
                 });
+                ws.send(response.newSale.saleId);
                 generateSummary(data);
                 modalContent.innerHTML += `<br> Total: $${response.newSale.totalValue}`;
                 modal.classList.remove('opacity-0', 'pointer-events-none');
