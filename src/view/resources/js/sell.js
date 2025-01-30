@@ -10,7 +10,6 @@ const ws = new WebSocket('wss://ws.reposteriafamoso.com');
 
 ws.onopen = () => {
     console.log('Connected to WebSocket');
-    ws.send('Hello from client!');
 };
 
 ws.onmessage = (event) => {
@@ -134,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return
         }
     
-        fetch(url + '/sales', {
+        fetch(urlTest + '/sales', {
             method: 'POST',
             body: JSON.stringify(data),
             headers: {
