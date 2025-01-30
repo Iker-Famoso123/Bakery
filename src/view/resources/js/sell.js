@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return
         }
     
-        fetch(urlTest + '/sales', {
+        fetch(url + '/sales', {
             method: 'POST',
             body: JSON.stringify(data),
             headers: {
